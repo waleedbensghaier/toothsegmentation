@@ -149,10 +149,11 @@ class CustomDataset(utils.Dataset):
 
         # Split the dataset, if train, get 90%, else 10%
         len_images = len(coco_json['images'])
+        print(len_images)
         if dataset_type == "train":
-            img_range = [0,int(len_images*10/8)]
+            img_range = [0,int((len_images*8)/10)]
         else:
-            img_range = [int(len_images*10/8),len_images]
+            img_range = [int((len_images*8)/10),len_images]
 
         for i in range(img_range[0], img_range[1]):
             image = coco_json['images'][i]
