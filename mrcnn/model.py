@@ -27,7 +27,7 @@ import tensorflow.keras.layers as KL
 KE = KL
 import tensorflow.keras.models as KM
 
-from mrcnn_demo import utils
+from mrcnn import utils
 
 # Requires TensorFlow 1.3+ and Keras 2.0.8+.
 from distutils.version import LooseVersion
