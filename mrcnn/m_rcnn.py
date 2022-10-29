@@ -14,7 +14,7 @@ import shutil
 import zipfile
 
 # Root directory of the project
-ROOT_DIR = os.path.abspath("/content/maskrcnn_colab")
+ROOT_DIR = os.path.abspath("/content/toothsegmentation")
 print("VERS 0.4 - updated 04/08/2022")
 # Import Mask RCNN
 sys.path.append(ROOT_DIR)  # To find local version of the library
