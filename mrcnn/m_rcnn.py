@@ -78,10 +78,10 @@ class CustomConfig(Config):
     # TRAIN_ROIS_PER_IMAGE = 32
 
     # Use a small epoch since the data is simple
-    STEPS_PER_EPOCH = 500
+    STEPS_PER_EPOCH = 10
 
     # use small validation steps since the epoch is small
-    VALIDATION_STEPS = 5
+    VALIDATION_STEPS = 10
 
     ETF_C = 2
 
@@ -150,7 +150,7 @@ class CustomDataset(utils.Dataset):
         # Split the dataset, if train, get 90%, else 10%
         len_images = len(coco_json['images'])
         if dataset_type == "train":
-            img_range = [0,(len_images * 0.8 )]
+            img_range = [0,int(len_images * 0.8 )]
         else:
             img_range = [int(len_images * 0.8),len_images]
 
